@@ -1,0 +1,43 @@
+// @font-face {
+//     font-family: 'FuturaPT';
+//     src: url('../fonts/FuturaPT-Book.eot');
+//     src: url('../fonts/FuturaPT-Book.eot?#iefix') format('embedded-opentype'),
+//     url('../fonts/FuturaPT-Book.woff') format('woff'),
+//     url('../fonts/FuturaPT-Book.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+// @font-face {
+//     font-family: 'FuturaPTDemi';
+//     src: url('../fonts/FuturaPT-Demi.eot');
+//     src: url('../fonts/FuturaPT-Demi.eot?#iefix') format('embedded-opentype'),
+//     url('../fonts/FuturaPT-Demi.woff') format('woff'),
+//     url('../fonts/FuturaPT-Demi.ttf') format('truetype');
+//     font-weight: normal;
+//     font-style: normal;
+// }
+
+
+@font-face {
+    font-family: 'montserratbold';
+    src: url('../fonts/montserrat-bold-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'montserratregular';
+    src: url('../fonts/montserrat-regular-webfont.woff2') format('woff2'),
+         url('../fonts/montserrat-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Larianti Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Larianti Regular'), url('../fonts/larianti.woff') format('woff');
+}

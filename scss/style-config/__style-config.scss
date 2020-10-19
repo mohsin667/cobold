@@ -1,0 +1,28 @@
+/* Main Configuration Don't Touch
+	 ========================================================================== */
+// WebFonts
+@import             'fonts.scss';
+$regular    :       "montserratregular", sans-serif;
+$bold    	:       "montserratbold", sans-serif;
+
+// WebColors
+$base				:		#e1f8fb;
+
+
+// Media Query Screen Size's
+$small      :       650px; // 650px
+$medium     :       64em; //800px
+$default    :       64em; //1024px
+$large      :       75em; //1200px
+$xlarge     :       1368px; //1368px
+$xxlarge    :       90.1em; //1441px
+
+@import 'media-query',
+		'typography',
+		'normalize',
+		'buttons',
+		'container';
+
+
+//  /* Main Configuration Don't Touch
+// 	 ========================================================================== */
