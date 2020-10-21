@@ -1,4 +1,12 @@
 window.addEventListener('DOMContentLoaded', (event) => {
+    
+    var scene = document.getElementById('scene');
+    var parallaxInstance = new Parallax(scene, {
+    relativeInput: true
+    });
+
+    parallaxInstance.friction(0.2, 0.1);
+
     const trigger = document.querySelector("#mobTrigger");
     const nav = document.querySelector("nav");
     const slideBack = document.querySelector(".logo .slide-arrow")

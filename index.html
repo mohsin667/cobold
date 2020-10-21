@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mohsin Ansari - Assignment</title>
     <link rel="stylesheet" href="assets/css/app.css">
+    <script src="assets/js/parallax.js"></script>
 </head>
 
 <body>
@@ -91,12 +92,12 @@
                 </div>
             </div>
             <div class="floating-element">
-                <ul>
-                    <li class="turtle"><img src="./assets/img/turtule.png" alt=""></li>
-                    <li class="bubble bubble-1"><img src="./assets/img/bubble-2.png" alt=""></li>
-                    <li class="bubble bubble-2"><img src="./assets/img/bubble-2.png" alt=""></li>
-                    <li class="bubble bubble-3"><img src="./assets/img/bubble-3.png" alt=""></li>
-                    <li class="bubble bubble-4"><img src="./assets/img/bubble-2.png" alt=""></li>
+                <ul data-relative-input="true" id="scene">
+                    <li data-depth="0.2" class="turtle"><img src="./assets/img/turtule.png" alt=""></li>
+                    <li data-depth="0.1" class="bubble bubble-1"><img src="./assets/img/bubble-2.png" alt=""></li>
+                    <li data-depth="0.2" class="bubble bubble-2"><img src="./assets/img/bubble-2.png" alt=""></li>
+                    <li data-depth="0.5" class="bubble bubble-3"><img src="./assets/img/bubble-3.png" alt=""></li>
+                    <li data-depth="0.6" class="bubble bubble-4"><img src="./assets/img/bubble-2.png" alt=""></li>
                 </ul>
             </div>
             <div class="wave-image">
@@ -108,14 +109,14 @@
         <!-- article section -->
         <section class="article-section">
             <div class="section-row">
-                <div class="picture-column">
-                    <div class="caption-and-title">
+                <div class="picture-column" >
+                    <div class="caption-and-title" data-aos="fade-down" data-aos-duration="1000" >
                         <h2>We are AVANTI</h2>
                         <p>and we love animals!</p>
                     </div>
-                    <img src="./assets/img/article-1.jpg" alt="Dog">
+                    <img data-aos="fade-up" data-aos-duration="1000" src="./assets/img/article-1.jpg" alt="Dog">
                 </div>
-                <article class="article-column">
+                <article class="article-column" data-aos="fade-down" data-aos-duration="1000" >
                     <p>AVANTI Overseas Private Limited is a 4-decade old manufacturing business, headquartered in New Delhi, India. We produce sustainable, high quality pet products for pet lovers across the world. With a primary focus on exports, our products are currently sold in over 25 countries, including the USA, the UK, Europe, Australia, and Japan. </p>
                     <p>AVANTI manufactures pet products in three main categories:</p>
                     <div class="section-graphic-details">
@@ -147,13 +148,13 @@
 
         <section class="article-section">
             <div class="section-row reverse">
-                <div class="picture-column">
-                    <div class="caption-and-title">
+                <div class="picture-column" >
+                    <div class="caption-and-title" data-aos="fade-down" data-aos-duration="1000"  >
                         <h2><a href="#">See Products ></a></h2>
                     </div>
-                    <img src="./assets/img/article-2.jpg" alt="Dog">
+                    <img data-aos="fade-up" data-aos-duration="1000"  src="./assets/img/article-2.jpg" alt="Dog">
                 </div>
-                <article class="article-column">
+                <article class="article-column"  data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000">
                    <div class="text-block">
                        <h3>AVANTI Products & Services</h3>
                         <p>Our teams service customers from all over the world, ranging from large format retailers to global distributors. We create private labels, and sell our own brand of bowls (DURAPET), silicon diners (VACCUMAT) as well as Toys & Bedding (RESPLOOT). </p>
@@ -215,14 +216,14 @@
         </div>
 
         <div class="graphic-and-text-section">
-            <div class="textual-block">
+            <div class="textual-block" data-aos="fade-down" data-aos-delay="500" data-aos-duration="1000" >
                 <div class="heading">
                     <p>AVANTI Sustainability Initiative</p>
                 </div>
                 <p>Climate change is real, and embedding sustainability into our way of life is the need of the hour. At AVANTI, we aim to achieve sustainable growth holistically through our commitment to the environment, processes, products and our teams. </p>
                 <a href="#">Learn more about AVANTI’s sustainability initiatives in 2019.</a>
             </div>
-            <div class="image-block">
+            <div class="image-block"  data-aos="fade-up"  data-aos-duration="1000">
                 <img src="./assets/img/text-block-image.png" alt="">
             </div>
         </div>
@@ -288,7 +289,11 @@
         </footer>
     </div>
 </body>
+<script src="assets/js/aos.js"></script>
+    <script>
+        if (!window.Cypress) AOS.init();
+    </script>
     <script src="assets/js/vendor/jquery-3.5.1.js"></script>
-    <script src="assets/js/app.js"></script>
     <script src="assets/js/vendor/slick.min.js"></script>
+    <script src="assets/js/app.js"></script>
 </html>

@@ -7,10 +7,8 @@
     align-items: center;
     flex-flow: wrap;
     margin-bottom: 3rem;
-    @include media($medium) {
-        margin-bottom: 13rem;
-    }
     @include media($large) {
+        margin-bottom: 13rem;
         padding: 0 6.5rem;
     }
 
