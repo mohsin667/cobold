@@ -1,0 +1,51 @@
+footer {
+    width: 100%;
+    float: left;
+    padding: 3rem 1.5rem;
+    display: flex;
+    justify-content: space-between;
+    flex-flow:column;
+    position: relative;
+    @include media($medium) {
+        padding: 6.5rem;
+        flex-flow:row ;
+
+    }
+    .copy-text {
+        bottom: 9rem;
+        opacity: 0.8;
+        margin-top: 3rem;
+        @include media($medium) {
+            position: absolute;
+        }
+    }
+    .logo {
+        flex-grow: 2;
+        max-width: 23rem;
+    }
+    ul {
+        opacity: 0.8;
+        margin-bottom: 0;
+        li {
+            margin-bottom: 2rem;
+            font-size: 1.4rem;
+            p {
+                font-size: 1.4rem;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &:last-child {
+            li {
+                margin-bottom: 1rem;
+                @include media($medium) {
+                    text-align: right;
+                }
+                &:first-child {
+                    margin-bottom: 2rem;
+                }
+            }
+        }
+    }
+}

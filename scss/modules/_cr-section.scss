@@ -2,28 +2,62 @@
     width: 100%;
     float: left;
     background-color: #93C69E;
-    padding: 9rem 6.5rem 0;
+    padding: 9rem 1.5rem 0;
+    position: relative;
+    overflow: hidden;
+    @include media($medium) {
+        padding: 9rem 6.5rem 0;
+    }
+    .cake {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #8dc198;
+        left: 2.5rem;
+        transform-origin: center;
+        z-index: 2;
+        transform: rotate(60deg);
+        
+        @include media($large) {
+            bottom: -85%;
+            width: 50%;    
+        }
+    }
     .text-section {
         max-width: 88.5rem;
         margin: 0 auto;
         text-align: center;
-
-        h3 {
+        position: relative;
+        z-index: 3;
+        margin-bottom: 5rem;
+        h3 {    
             font-family: $italic;
-            font-size: 2.3rem;
+            font-size: 1.8rem;
+            line-height: 3;
             color: #fff;
-            margin-bottom: 5rem;
+            margin-bottom: 2rem;
+            
+            @include media($large) {
+                margin-bottom: 5rem;
+            font-size: 2.4rem;
+
+            }
             span {
+                line-height: 1;
                 font-family: $bold;
                 display: block;
                 margin-top: 1.8rem;
             }
         }
         p{
-            font-size: 2.4rem;
+            font-size: 1.6rem;
             color: #fff;
             line-height: 1.5;
             padding-bottom: 1rem;
+            @include media($large) {
+                font-size: 2.4rem;
+            }
         }
     }
     .link-row {
@@ -31,6 +65,24 @@
         text-align: center;
         color: #fff;
         font-weight: 900;
-        font-size: 2.4rem;
+        font-size: 1.6rem;
+        position: relative;
+        z-index: 3;
+        margin-bottom: 5rem;
+        @include media($large) {
+            font-size: 2.4rem;
+        }
+        a {
+            position: relative;
+            &:after {
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                content: "";
+                position: absolute;
+                bottom: -1rem;
+                display: block;
+            }
+        }
     }
 }

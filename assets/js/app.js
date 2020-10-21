@@ -4,10 +4,11 @@ window.addEventListener('DOMContentLoaded', (event) => {
     const slideBack = document.querySelector(".logo .slide-arrow")
     trigger.addEventListener("click",e=>{
         nav.classList.add("flaot")
+        $("body").css("overflow","hidden")
     })
     slideBack.addEventListener("click",e=>{
         nav.classList.remove("flaot")
-        
+        $("body").css("overflow","visible")
     })
 
     // banner slider

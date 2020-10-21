@@ -5,8 +5,10 @@
     display: flex;
     flex-flow: wrap;
     align-items: center;
+    margin-bottom: 6rem;
     @include media($large) {
         padding: 0 6.5rem;
+        margin-bottom: 12rem;
     }
 
     .textual-block {

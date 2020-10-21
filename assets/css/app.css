@@ -737,7 +737,7 @@ template {
         justify-content: center;
         position: absolute;
         width: 100%;
-        bottom: -5rem; }
+        bottom: -7rem; }
         @media screen and (min-width: 90.1em) {
           .main .banner .banner-slider .slick-dots {
             bottom: -25rem; } }
@@ -858,6 +858,46 @@ template {
             .main .banner .floating-element ul li.bubble.bubble-4 img {
               bottom: 15rem;
               right: 7.3rem; }
+
+footer {
+  width: 100%;
+  float: left;
+  padding: 3rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  position: relative; }
+  @media screen and (min-width: 64em) {
+    footer {
+      padding: 6.5rem;
+      flex-flow: row; } }
+  footer .copy-text {
+    bottom: 9rem;
+    opacity: 0.8;
+    margin-top: 3rem; }
+    @media screen and (min-width: 64em) {
+      footer .copy-text {
+        position: absolute; } }
+  footer .logo {
+    flex-grow: 2;
+    max-width: 23rem; }
+  footer ul {
+    opacity: 0.8;
+    margin-bottom: 0; }
+    footer ul li {
+      margin-bottom: 2rem;
+      font-size: 1.4rem; }
+      footer ul li p {
+        font-size: 1.4rem; }
+      footer ul li:last-child {
+        margin-bottom: 0; }
+    footer ul:last-child li {
+      margin-bottom: 1rem; }
+      @media screen and (min-width: 64em) {
+        footer ul:last-child li {
+          text-align: right; } }
+      footer ul:last-child li:first-child {
+        margin-bottom: 2rem; }
 
 .article-section {
   width: 100%;
@@ -1098,10 +1138,12 @@ template {
   padding: 1.5rem;
   display: flex;
   flex-flow: wrap;
-  align-items: center; }
+  align-items: center;
+  margin-bottom: 6rem; }
   @media screen and (min-width: 75em) {
     .graphic-and-text-section {
-      padding: 0 6.5rem; } }
+      padding: 0 6.5rem;
+      margin-bottom: 12rem; } }
   .graphic-and-text-section .textual-block {
     width: 100%; }
     @media screen and (min-width: 64em) {
@@ -1148,28 +1190,75 @@ template {
   width: 100%;
   float: left;
   background-color: #93C69E;
-  padding: 9rem 6.5rem 0; }
+  padding: 9rem 1.5rem 0;
+  position: relative;
+  overflow: hidden; }
+  @media screen and (min-width: 64em) {
+    .cr-section {
+      padding: 9rem 6.5rem 0; } }
+  .cr-section .cake {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #8dc198;
+    left: 2.5rem;
+    transform-origin: center;
+    z-index: 2;
+    transform: rotate(60deg); }
+    @media screen and (min-width: 75em) {
+      .cr-section .cake {
+        bottom: -85%;
+        width: 50%; } }
   .cr-section .text-section {
     max-width: 88.5rem;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 5rem; }
     .cr-section .text-section h3 {
       font-family: "Larianti Regular", sans-serif;
-      font-size: 2.3rem;
+      font-size: 1.8rem;
+      line-height: 3;
       color: #fff;
-      margin-bottom: 5rem; }
+      margin-bottom: 2rem; }
+      @media screen and (min-width: 75em) {
+        .cr-section .text-section h3 {
+          margin-bottom: 5rem;
+          font-size: 2.4rem; } }
       .cr-section .text-section h3 span {
+        line-height: 1;
         font-family: "montserratbold", sans-serif;
         display: block;
         margin-top: 1.8rem; }
     .cr-section .text-section p {
-      font-size: 2.4rem;
+      font-size: 1.6rem;
       color: #fff;
       line-height: 1.5;
       padding-bottom: 1rem; }
+      @media screen and (min-width: 75em) {
+        .cr-section .text-section p {
+          font-size: 2.4rem; } }
   .cr-section .link-row {
     width: 100%;
     text-align: center;
     color: #fff;
     font-weight: 900;
-    font-size: 2.4rem; }
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 3;
+    margin-bottom: 5rem; }
+    @media screen and (min-width: 75em) {
+      .cr-section .link-row {
+        font-size: 2.4rem; } }
+    .cr-section .link-row a {
+      position: relative; }
+      .cr-section .link-row a:after {
+        width: 100%;
+        height: 2px;
+        background-color: #fff;
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        display: block; }
