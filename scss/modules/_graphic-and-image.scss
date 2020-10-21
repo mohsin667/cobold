@@ -1,0 +1,64 @@
+.graphic-and-text-section {
+    width: 100%;
+    float: left;
+    padding: 1.5rem;
+    display: flex;
+    flex-flow: wrap;
+    align-items: center;
+    @include media($large) {
+        padding: 0 6.5rem;
+    }
+
+    .textual-block {
+        width: 100%;
+        @include media($medium) {
+            padding-right: 5rem;
+            width: 50%;
+        }
+        .heading {
+            p {
+                font-size: 3rem;
+                padding-bottom: 3rem;
+            }
+        }
+        p {
+            padding-bottom: 2rem;
+        }
+        a {
+            font-weight: 900;
+            text-decoration: underline;
+        }
+    }
+    .image-block {
+        width: 100%;
+        position: relative;
+        z-index: 9;
+        margin-top: 5rem;
+        @include media($medium) {
+            width: 50%;
+        }
+        @include media($large) {
+            margin-top: 0;
+        }
+        &:before {
+            content: "";
+            position: absolute;
+            right: -1.5rem;
+            top: -1.5rem;
+            width: 100%;
+            height: 100%;
+            background-color: #E9F1F5;
+            z-index: 8;
+
+            @include media($large) {
+                right: -6.5rem;
+            top: -6.5rem;
+            }
+        }
+        img {
+            position: relative;
+            z-index: 9;
+        }
+    }
+
+}

@@ -5,9 +5,14 @@
 
 @mixin base-font {
     margin: 0;
+    color: #4B4B4B;
     font-family: $regular;
     font-size: 1.6rem;
     line-height: 1.5;
+    @include media($xxlarge) {
+        font-size: 1.8rem;
+        line-height: 2;
+    }
 }
 
 @mixin base-font-style {

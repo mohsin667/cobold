@@ -1,0 +1,31 @@
+.client {
+    display: flex;
+    width: 100%;
+    float: left;
+    padding: 1.5rem;
+    justify-content: space-between;
+    align-items: center;
+    flex-flow: wrap;
+    margin-bottom: 3rem;
+    @include media($medium) {
+        margin-bottom: 13rem;
+    }
+    @include media($large) {
+        padding: 0 6.5rem;
+    }
+
+    .client-logo {
+        width: 50%;
+        margin-bottom: 3rem;
+        @include media($medium) {
+            width: auto;
+        }
+        img {
+            width: auto;
+            margin: 0 auto;
+            @include media($medium) {
+                width: 100%;
+            }
+        }
+    }
+}

@@ -20,6 +20,13 @@
 		position: relative;
 		transition: all 0.5s;
 		max-height: 4.6rem;
+		line-height: 1.6rem;
+		&.pink {
+			background-color: #F78AB8;
+			&:after {
+				background-color: #ca8ba6;
+			}
+		}
 	
 		.btn-b {
 			display: block;

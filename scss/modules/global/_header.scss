@@ -1,5 +1,8 @@
 .main {
     position: relative;
+    width: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
     nav {
         transition: all 0.6s linear; 
         padding-top: 4.8rem;
@@ -10,7 +13,12 @@
         transform: translateX(-120%);
         background-color: #e1f8fb;
         z-index: 9;
+        height: 100vh;
+        @include media($medium) {
+            height: auto;
+        }
         &.flaot {
+            z-index: 99;
             transform: translateX(0%);
         }
         @include media($medium) {
@@ -88,11 +96,14 @@
                             border-bottom: 1px solid rgba(0,0,0,0.1);
                             padding-left: 1.5rem;
 
-                            @include media($medium) {
-                                font-size: 1.6rem;
+                            @include media($small) {
+                                font-size: 1.2rem;
                                 border: none;
                                 margin-bottom: 0;
                                 padding-bottom: 0;
+                            }
+                            @include media($large) {
+                                font-size: 1.6rem;
                             }
                             @include media($xlarge) {
                                 padding-left: 0;
@@ -109,6 +120,9 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        position: absolute;
+        width: 100%;
+        z-index: 8;
         @include media($medium) {
             display: none;
         }
@@ -134,20 +148,27 @@
         }
     }
     .banner {
-        padding: 19rem 18.5rem 0;
         width: 100%;
         position: relative;
         float: left;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: bottom;
+        padding: 14rem 1.5rem 0;
+        background-color: $base;
         @include media($medium) {
+            background-color: transparent;
+            padding: 19rem 18.5rem 0;
             background-image: url(../img/banner.svg);
         }
         .banner-slider {
             position: relative;
-            margin-bottom: 17.8rem;
+            margin-bottom: 10rem;
             z-index: 8;
+            text-align: center;
+            @include media($medium) {
+                text-align: left;
+            }
             @include media($xxlarge) {
                 margin-bottom: 28rem;
             }
@@ -155,8 +176,12 @@
                 display: flex;
                 justify-content: center;
                 position: absolute;
-                bottom: -14rem;
                 width: 100%;
+                bottom: -5rem;
+                
+                @include media($xxlarge){
+                    bottom: -25rem;
+                }
                 li {
                     button {
                         cursor: pointer;
@@ -183,13 +208,35 @@
                     color: #444444;
                     text-transform: uppercase;
                     padding-bottom: 1.6rem;
+                    margin-bottom: 2rem;
                 }
                 p {
                     color: #222222;
+                    font-size: 1.4rem;
+                    @include media($medium) {
+                        font-size: 1.6rem;
+                    }
+                    @include media($xxlarge) {
+                        font-size: 1.8rem;
+                    }
                 }
             }
             .btn-row {
-                padding-top: 5rem;
+                padding-top: 2rem;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                margin: 0;
+                @include media($medium) {
+                    padding-top: 2rem;
+                    display: inline-block;
+                    width: auto;
+                    margin-left: -3rem;
+                }
+                @include media($large) {
+                    padding-top: 5rem;
+                    
+                }
             }
             .slick-arrow {
                 position: absolute;
@@ -225,6 +272,10 @@
             top: 0;
             left: 0;
             position: absolute;
+            display: none;
+            @include media($large) {
+                display: block;
+            }
             ul {
                 width: 100%;
                 float: left;
